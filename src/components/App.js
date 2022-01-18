@@ -4,30 +4,28 @@ import TodosPage from "../pages/TodosPage";
 import TodosCreatePage from "../pages/TodosCreatePage";
 import TodosEditPage from "../pages/TodosEditPage";
 import Home from "../pages/HomePage";
+import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 const App = () => {
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/todos">Todos </Link>
-            </li>
-            <li>
-              <Link to="/todos/create">Create Todo</Link>
-            </li>
-            <li>
-              <Link to="/todos/edit/:id">Edit Todo</Link>
-            </li>
-          </ul>
-        </nav>
+        <div className="ui secondary pointing menu app-cont">
+          <Link className="item" to="/">
+            Home
+          </Link>
+          <Link className="item" to="/todos">
+            Todos
+          </Link>
+          <Link className="item" to="/todos/create">
+            Create Todo
+          </Link>
+          <Link className="item" to="/todos/edit/:id">
+            Edit Todo
+          </Link>
+        </div>
       </div>
-
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/todos" element={<TodosPage />} />

@@ -4,13 +4,11 @@ import "../components/TodosPage.css";
 
 const TodosPage = () => {
   return (
-    <div className="TodosPage-cont ui centered">
+    <div className="todos-page-cont">
       <h1>TodosPage</h1>
-      <Link to="/todos/create">
-        <button className="ui primary button">Create Todo</button>
-      </Link>
+
       <br />
-      <table class="ui celled table">
+      <table className="ui celled table table-class">
         <thead>
           <tr>
             <th>Name</th>
@@ -40,6 +38,12 @@ const TodosPage = () => {
           </tr>
         </tbody>
       </table>
+
+      <div className="button-cont">
+        <Link to="/todos/create">
+          <button className="ui primary button">Create Todo</button>
+        </Link>
+      </div>
     </div>
   );
 };
