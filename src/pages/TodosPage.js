@@ -12,7 +12,7 @@ const TodosPage = () => {
         <thead>
           <tr>
             <th>Name</th>
-            <th>Description,</th>
+            <th>Description</th>
             <th>Status</th>
             <th>Actions</th>
           </tr>
@@ -22,19 +22,37 @@ const TodosPage = () => {
             <td data-label="Name">James</td>
             <td data-label="Description">24</td>
             <td data-label="Status">Engineer</td>
-            <td data-label="Actions">some action</td>
+            <td data-label="Actions" className="action-button">
+              <Link to="/todos/edit/:id">
+                <button className="ui green button">Edit</button>
+              </Link>
+              <button className="ui orange button">Done/Undo</button>
+              <button className="ui red button">Delete</button>
+            </td>
           </tr>
           <tr>
             <td data-label="Name">Jill</td>
             <td data-label="Description">26</td>
             <td data-label="Status">Engineer</td>
-            <td data-label="Actions">some action</td>
+            <td data-label="Actions" className="action-button">
+              <Link to="/todos/edit/:id">
+                <button className="ui green button">Edit</button>
+              </Link>
+              <button className="ui orange button">Done/Undo</button>
+              <button className="ui red button">Delete</button>
+            </td>
           </tr>
           <tr>
             <td data-label="Name">Elyse</td>
             <td data-label="Description">24</td>
             <td data-label="Status">Designer</td>
-            <td data-label="Actions">some action</td>
+            <td data-label="Actions" className="action-button">
+              <Link to="/todos/edit/:id">
+                <button className="ui green button">Edit</button>
+              </Link>
+              <button className="ui orange button">Done/Undo</button>
+              <button className="ui red button">Delete</button>
+            </td>
           </tr>
         </tbody>
       </table>

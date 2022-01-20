@@ -13,8 +13,16 @@
   margin-bottom: 30px;
 }
 
+.todos-page-cont .table-class a {
+  color: white;
+}
+
 .button-cont {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.action-button {
+  width: 22vw;
 }
