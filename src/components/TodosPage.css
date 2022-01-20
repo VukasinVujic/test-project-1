@@ -1,0 +1,28 @@
+.todos-page-cont h1 {
+  text-align: center;
+}
+
+.todos-page-cont {
+  margin: 0 auto;
+}
+
+.todos-page-cont .table-class {
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.todos-page-cont .table-class a {
+  color: white;
+}
+
+.button-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.action-button {
+  width: 22vw;
+}
