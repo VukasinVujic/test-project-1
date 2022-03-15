@@ -5,20 +5,20 @@ import { fetchTodos } from "../actions";
 import "../components/TodosPage.css";
 
 class TodosPage extends React.Component {
-  createListTodos() {
-    return this.props.todos.map((todo) => {
-      return (
-        <li key={todo.id}>
-          {todo.name} {todo.description}
-        </li>
-      );
-    });
-  }
+  // createListTodos() {
+  //   return this.props.todos.map((todo) => {
+  //     return (
+  //       <li key={todo.id}>
+  //         {todo.name} {todo.description}
+  //       </li>
+  //     );
+  //   });
+  // }
 
   giveTodos() {
     return this.props.todos.map((todo) => {
       return (
-        <tr>
+        <tr key={todo.id}>
           <td data-label> {todo.name} </td>
           <td data-label> {todo.description} </td>
           <td data-label> {todo.status} </td>
@@ -41,7 +41,7 @@ class TodosPage extends React.Component {
 
         <br />
 
-        <ul>{this.createListTodos()}</ul>
+        {/* <ul>{this.createListTodos()}</ul> */}
 
         <table className="ui celled table table-class">
           <thead>
