@@ -1,12 +1,15 @@
 import React from "react";
-import { connect } from "react-redux";
+import { connect, useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { fetchTodos } from "../actions";
 import "../components/TodosPage.css";
 
-const TodosPage = (props) => {
+const TodosPage = () => {
+  let data = useSelector((state) => state);
+  const dispatch = useDispatch();
+
   const giveTodos = () => {
-    return props.todos.map((todo) => {
+    return data.todos.map((todo) => {
       return (
         <tr key={todo.id}>
           <td data-label> {todo.name} </td>
@@ -51,8 +54,10 @@ const TodosPage = (props) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return { todos: state.todos };
-};
+// const mapStateToProps = (state) => {
+//   return { todos: state.todos };
+// };
 
-export default connect(mapStateToProps, { fetchTodos })(TodosPage);
+// export default connect(mapStateToProps, { fetchTodos })(TodosPage);
+
+export default connect()(TodosPage);
